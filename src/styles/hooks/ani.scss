@@ -1,0 +1,33 @@
+@import '../_mixins';
+
+.ani {
+	transition: all 0.6s;
+	&.up {
+		transform: translateY(80px);
+	}
+	&.down {
+		transform: translateY(-80px);
+	}
+	&.left {
+		transform: translateX(80px);
+	}
+	&.right {
+		transform: translateX(-80px);
+	}
+	&.opacity {
+		opacity: 0;
+	}
+	&.on {
+		&.up,
+		&.down {
+			transform: translateY(0);
+		}
+		&.left,
+		&.right {
+			transform: translateX(0);
+		}
+		&.opacity {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@import '../_mixins';
+
+header {
+	z-index: 2;
+	@include position(sticky, 0, 0);
+	&::before {
+		@include shadow;
+	}
+}
+
+footer {
+	a {
+		img {
+			filter: brightness(0) invert(1);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		nav {
+			ul {
+				column-gap: 30px;
+				li {
+					a {
+						font-size: 1.0625px;
+					}
+				}
+			}
+		}
+	}
+}
